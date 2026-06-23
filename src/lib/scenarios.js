@@ -51,7 +51,7 @@ export const scenarios = [
     desc: '构建有说服力的汇报框架，获得管理层支持',
     icon: '📊',
     color: 'indigo',
-    members: ['贝佐斯', '费曼', '马斯克', '阿莫']
+    members: ['贝佐斯', '费曼', '马斯克', 'PG']
   },
   {
     id: 'ai',

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "slug": "trump-perspective",
+  "display_name": "Donald Trump",
+  "aliases": [],
+  "status": "testing",
+  "privacy": "public",
+  "living_person": true,
+  "research_cutoff": "2026-04-30",
+  "legacy_sha256": "519c87f78200f0f6d7020fb90dfbce77c99ad502916d87805b455a8016254b97",
+  "council_domains": [
+    "negotiation",
+    "attention",
+    "power"
+  ]
+}

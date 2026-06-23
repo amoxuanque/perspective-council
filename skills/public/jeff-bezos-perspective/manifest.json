@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "slug": "jeff-bezos-perspective",
+  "display_name": "Jeff Bezos",
+  "aliases": [
+    "Jeffrey Bezos",
+    "贝佐斯"
+  ],
+  "status": "testing",
+  "privacy": "public",
+  "living_person": true,
+  "research_cutoff": "2026-06-23",
+  "legacy_sha256": null,
+  "council_domains": [
+    "customer-obsession",
+    "commercialization",
+    "long-term-compounding",
+    "organization-design"
+  ]
+}

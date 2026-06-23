@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {"id":"S1","title":"字节跳动七周年演讲","url":"https://www.jiemian.com/article/3024030.html","type":"primary","dimensions":["writings","expression","timeline"]},
+    {"id":"S2","title":"卸任CEO全员信","url":"https://wallstreetcn.com/articles/3630796","type":"primary","dimensions":["writings","decisions","timeline"]},
+    {"id":"S3","title":"人才判断标准访谈","url":"https://www.thepaper.cn/newsDetail_forward_10982103","type":"primary","dimensions":["conversations","decisions"]},
+    {"id":"S4","title":"AI人才过拟合演讲","url":"https://www.stcn.com/article/detail/3377808.html","type":"primary","dimensions":["writings","timeline"]},
+    {"id":"S5","title":"张一鸣公开读书主页","url":"https://book.douban.com/people/onebird/","type":"primary","dimensions":["writings","timeline"]},
+    {"id":"S6","title":"乌镇三人对话","url":"https://www.pingwest.com/a/94087","type":"primary","dimensions":["conversations","expression"]},
+    {"id":"S7","title":"世界不是只有你和对手访谈","url":"https://36kr.com/p/1721289883649","type":"primary","dimensions":["conversations","expression"]},
+    {"id":"S8","title":"算法与人性访谈","url":"https://www.huxiu.com/article/174510.html","type":"primary","dimensions":["conversations","decisions"]},
+    {"id":"S9","title":"九周年演讲英文全文","url":"https://kr-asia.com/zhang-yiming-doing-extraordinary-things-with-an-ordinary-mind-bytedances-ninth-anniversary-speech","type":"primary","dimensions":["writings","expression"]},
+    {"id":"S10","title":"Last Speech transcript","url":"https://interconnected.blog/zhang-yiming-last-speech/","type":"primary","dimensions":["writings","expression"]},
+    {"id":"S11","title":"Source Code Capital management philosophy","url":"https://sourcecodecap.com/code-class-post/bytedances-zhang-yiming-bring-outside-in-and-avoid-managing-up-how-to-protect-the-comp/","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S12","title":"CNN resignation analysis","url":"https://www.cnn.com/2021/05/20/tech/zhang-bytedance-ceo-resignation-intl-hnk/index.html","type":"secondary","dimensions":["external","timeline"]},
+    {"id":"S13","title":"SCMP founder profile","url":"https://www.scmp.com/tech/big-tech/article/3134264/who-zhang-yiming-and-how-he-grew-bytedance-and-tiktok-global","type":"secondary","dimensions":["external","timeline"]}
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {"id":"S1","title":"Clayton Christensen obituary","url":"https://www.hbs.edu/news/releases/Pages/clayton-christensen-obituary.aspx","type":"secondary","dimensions":["external","timeline"]},
+    {"id":"S2","title":"How Will You Measure Your Life?","url":"https://hbr.org/2010/07/how-will-you-measure-your-life","type":"primary","dimensions":["writings","expression","timeline"]},
+    {"id":"S3","title":"What Is Disruptive Innovation?","url":"https://hbr.org/2015/12/what-is-disruptive-innovation","type":"primary","dimensions":["writings","decisions","expression"]},
+    {"id":"S4","title":"Know Your Customers' Jobs to Be Done","url":"https://hbr.org/2016/09/know-your-customers-jobs-to-be-done","type":"primary","dimensions":["writings","decisions","expression"]},
+    {"id":"S5","title":"Meeting the Challenge of Disruptive Change","url":"https://hbr.org/2000/03/meeting-the-challenge-of-disruptive-change","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S6","title":"The Innovator's DNA","url":"https://hbr.org/2009/12/the-innovators-dna","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S7","title":"Revisiting Jobs to Be Done with Clayton Christensen","url":"https://hbr.org/podcast/2020/01/revisiting-jobs-to-be-done-with-clayton-christensen","type":"primary","dimensions":["conversations","expression","timeline"]},
+    {"id":"S8","title":"Clayton Christensen speeches","url":"https://speeches.byu.edu/speakers/clayton-christensen/","type":"primary","dimensions":["conversations","expression","timeline"]},
+    {"id":"S9","title":"Jobs to Be Done Theory","url":"https://www.christenseninstitute.org/theory/jobs-to-be-done/","type":"secondary","dimensions":["external","decisions"]},
+    {"id":"S10","title":"Resources, Processes, and Priorities","url":"https://www.christenseninstitute.org/theory/resources-processes-priorities/","type":"secondary","dimensions":["external","decisions"]},
+    {"id":"S11","title":"Disruptive Innovation","url":"https://www.christenseninstitute.org/theory/disruptive-innovation/","type":"secondary","dimensions":["external","decisions"]},
+    {"id":"S12","title":"The Essential Clayton Christensen Articles","url":"https://hbr.org/2020/01/the-essential-clayton-christensen-articles","type":"secondary","dimensions":["external","timeline"]},
+    {"id":"S13","title":"Clayton Christensen biography","url":"https://www.britannica.com/biography/Clayton-Christensen","type":"secondary","dimensions":["external","timeline"]}
+  ]
+}

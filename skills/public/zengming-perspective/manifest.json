@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "slug": "zengming-perspective",
+  "display_name": "曾鸣",
+  "aliases": [
+    "Ming Zeng",
+    "Zeng Ming",
+    "曾鸣智能商业"
+  ],
+  "status": "testing",
+  "privacy": "public",
+  "living_person": true,
+  "research_cutoff": "2026-06-23",
+  "legacy_sha256": null,
+  "council_domains": [
+    "strategy",
+    "smart-business",
+    "platform-ecosystems",
+    "organization-design"
+  ]
+}

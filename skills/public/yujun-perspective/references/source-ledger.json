@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {"id":"S1","title":"俞军产品方法论 book listing","url":"https://www.books.com.tw/products/CN11708292","type":"primary","dimensions":["writings","timeline","expression"]},
+    {"id":"S2","title":"产品经理的发现和成长 slides","url":"https://www.slidestalk.com/u5/didi_yujun","type":"primary","dimensions":["writings","conversations","expression","decisions"]},
+    {"id":"S3","title":"QCon Beijing 2018 speaker page","url":"https://qcon.infoq.cn/2018/beijing/presentation/350","type":"primary","dimensions":["timeline","conversations"]},
+    {"id":"S4","title":"QCon Beijing 2018 track page","url":"https://qcon.infoq.cn/2018/beijing/track","type":"primary","dimensions":["timeline","conversations"]},
+    {"id":"S5","title":"跟俞军聊了三个小时产品（一）","url":"https://m.huxiu.com/article/174764.html","type":"primary","dimensions":["conversations","expression","decisions"]},
+    {"id":"S6","title":"俞军跟我聊了三个小时产品（2）","url":"https://36kr.com/p/1721305235457","type":"primary","dimensions":["conversations","expression","decisions"]},
+    {"id":"S7","title":"深度对话俞军：关于产品经理的价值、天赋、能力、成长及未来","url":"https://www.ifanr.com/863623","type":"primary","dimensions":["conversations","decisions","timeline","expression"]},
+    {"id":"S8","title":"滴滴产品高级副总裁俞军宣告近期离职","url":"https://www.nbd.com.cn/rss/toutiao/articles/1341454.html","type":"secondary","dimensions":["external","timeline","decisions"]},
+    {"id":"S9","title":"唐巧：俞军产品方法论读书笔记","url":"https://blog.devtang.com/2020/02/03/pm-work-from-yujun/","type":"secondary","dimensions":["writings","external"]},
+    {"id":"S10","title":"SamirChen：读俞军产品方法论","url":"https://www.samirchen.com/rn-the-product-methodology-of-yujun/","type":"secondary","dimensions":["writings","external"]},
+    {"id":"S11","title":"深度解析俞军的产品方法论","url":"https://www.woshipm.com/pmd/3402762.html","type":"secondary","dimensions":["external","writings"]},
+    {"id":"S12","title":"中国图书网：俞军产品方法论","url":"https://m.bookschina.com/8244879.htm","type":"secondary","dimensions":["writings","timeline"]}
+  ]
+}

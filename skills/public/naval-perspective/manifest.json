@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "slug": "naval-perspective",
+  "display_name": "Naval Ravikant",
+  "aliases": [],
+  "status": "testing",
+  "privacy": "public",
+  "living_person": true,
+  "research_cutoff": "2026-04-04",
+  "legacy_sha256": "0c9e06b7426b662ad1c53e23594869b194c7bcf5d008bd9ba798def8481a7c88",
+  "council_domains": [
+    "leverage",
+    "wealth",
+    "life-strategy"
+  ]
+}

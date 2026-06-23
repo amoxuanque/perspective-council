@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "S1",
+      "title": "The Value of Science",
+      "url": "https://calteches.library.caltech.edu/1575/1/Science.pdf",
+      "type": "primary",
+      "dimensions": ["writings", "expression"]
+    },
+    {
+      "id": "S2",
+      "title": "Cargo Cult Science",
+      "url": "https://calteches.library.caltech.edu/51/2/CargoCult.htm",
+      "type": "primary",
+      "dimensions": ["writings", "expression"]
+    },
+    {
+      "id": "S3",
+      "title": "Los Alamos from Below",
+      "url": "https://calteches.library.caltech.edu/34/3/FeynmanLosAlamos.htm",
+      "type": "primary",
+      "dimensions": ["decisions", "timeline"]
+    },
+    {
+      "id": "S4",
+      "title": "Take the World from Another Point of View",
+      "url": "https://calteches.library.caltech.edu/35/2/PointofView.htm",
+      "type": "primary",
+      "dimensions": ["conversations", "expression"]
+    },
+    {
+      "id": "S5",
+      "title": "The Problem of Teaching Physics in Latin America",
+      "url": "https://calteches.library.caltech.edu/46/2/LatinAmerica.htm",
+      "type": "primary",
+      "dimensions": ["decisions", "external"]
+    },
+    {
+      "id": "S6",
+      "title": "Nobel Lecture",
+      "url": "https://www.nobelprize.org/prizes/physics/1965/feynman/lecture/",
+      "type": "primary",
+      "dimensions": ["writings", "timeline"]
+    },
+    {
+      "id": "S7",
+      "title": "Appendix F - Personal Observations on Reliability of the Shuttle",
+      "url": "https://www.nasa.gov/history/rogersrep/v2appf.htm",
+      "type": "primary",
+      "dimensions": ["decisions", "timeline"]
+    },
+    {
+      "id": "S8",
+      "title": "The True Meaning of Physics",
+      "url": "https://omnimagazine.com/interview-richard-feynman-true-meaning-physics/",
+      "type": "primary",
+      "dimensions": ["conversations", "expression"]
+    },
+    {
+      "id": "S9",
+      "title": "Feynman at 100",
+      "url": "https://magazine.caltech.edu/post/feynman-at-100",
+      "type": "secondary",
+      "dimensions": ["external", "timeline"]
+    },
+    {
+      "id": "S10",
+      "title": "Feynman, Harassment, and the Culture of Science",
+      "url": "https://caltechletters.github.io/viewpoints/feynman-harassment-science",
+      "type": "secondary",
+      "dimensions": ["external"]
+    },
+    {
+      "id": "S11",
+      "title": "The Feynman Behind the Myth",
+      "url": "https://oxonianreview.com/articles/the-feynman-behind-the-myth",
+      "type": "secondary",
+      "dimensions": ["external"]
+    }
+  ]
+}

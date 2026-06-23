@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "S1",
+      "title": "The Art of the Deal",
+      "url": "https://www.amazon.com/Art-Deal-Donald-J-Trump/dp/0394555287",
+      "type": "primary",
+      "dimensions": ["writings", "timeline"]
+    },
+    {
+      "id": "S2",
+      "title": "Crippled America / Great Again",
+      "url": "https://www.amazon.com/Crippled-America-How-Make-Great/dp/1501137960",
+      "type": "primary",
+      "dimensions": ["writings", "timeline"]
+    },
+    {
+      "id": "S3",
+      "title": "Think Big and Kick Ass",
+      "url": "https://www.amazon.com/Think-Big-Kick-Ass-Business/dp/0061547832",
+      "type": "primary",
+      "dimensions": ["writings", "expression"]
+    },
+    {
+      "id": "S4",
+      "title": "TIME Person of the Year 2024 transcript",
+      "url": "https://time.com/7201565/person-of-the-year-2024-donald-trump-transcript/",
+      "type": "primary",
+      "dimensions": ["conversations", "expression", "timeline"]
+    },
+    {
+      "id": "S5",
+      "title": "Commission on Presidential Debates transcripts",
+      "url": "https://www.debates.org/voter-education/debate-transcripts/",
+      "type": "primary",
+      "dimensions": ["conversations", "expression", "timeline"]
+    },
+    {
+      "id": "S6",
+      "title": "Truth Social account",
+      "url": "https://truthsocial.com/@realDonaldTrump",
+      "type": "primary",
+      "dimensions": ["writings", "expression", "timeline"]
+    },
+    {
+      "id": "S7",
+      "title": "Too Much and Never Enough review",
+      "url": "https://www.npr.org/2020/07/23/894159895/trumps-niece-describes-a-toxic-family-dynamic-where-kindness-was-weakness",
+      "type": "secondary",
+      "dimensions": ["external"]
+    },
+    {
+      "id": "S8",
+      "title": "Fear: Trump in the White House",
+      "url": "https://www.amazon.com/Fear-Trump-White-House-Woodward/dp/150117551X",
+      "type": "secondary",
+      "dimensions": ["external", "decisions"]
+    },
+    {
+      "id": "S9",
+      "title": "The Dangerous Case of Donald Trump",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6145972/",
+      "type": "secondary",
+      "dimensions": ["external"]
+    },
+    {
+      "id": "S10",
+      "title": "The Episodic Man",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8763223/",
+      "type": "secondary",
+      "dimensions": ["external"]
+    }
+  ]
+}

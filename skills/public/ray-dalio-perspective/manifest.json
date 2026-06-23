@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "slug": "ray-dalio-perspective",
+  "display_name": "Ray Dalio",
+  "aliases": [
+    "达利欧"
+  ],
+  "status": "testing",
+  "privacy": "public",
+  "living_person": true,
+  "research_cutoff": "2026-06-23",
+  "legacy_sha256": null,
+  "council_domains": [
+    "risk",
+    "macro",
+    "organization-design",
+    "decision-making"
+  ]
+}

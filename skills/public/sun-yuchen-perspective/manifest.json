@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "slug": "sun-yuchen-perspective",
+  "display_name": "Justin Sun",
+  "aliases": [],
+  "status": "testing",
+  "privacy": "public",
+  "living_person": true,
+  "research_cutoff": "2026-04-07",
+  "legacy_sha256": "77572b9ef87b0ec70073ada6964033022bf0ad542f40b99951ab3d4fe872ff21",
+  "council_domains": [
+    "attention",
+    "crypto",
+    "deal-making"
+  ]
+}

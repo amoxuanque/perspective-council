@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {"id":"S1","title":"Principles","url":"https://www.principles.com/","type":"primary","dimensions":["writings","expression","timeline"]},
+    {"id":"S2","title":"How to Build a Company Where the Best Ideas Win","url":"https://www.ted.com/talks/ray_dalio_how_to_build_a_company_where_the_best_ideas_win","type":"primary","dimensions":["conversations","expression","decisions"]},
+    {"id":"S3","title":"How to Build a Company Where the Best Ideas Win transcript","url":"https://www.ted.com/talks/ray_dalio_how_to_build_a_company_where_the_best_ideas_win/transcript","type":"primary","dimensions":["writings","expression"]},
+    {"id":"S4","title":"How The Economic Machine Works","url":"https://www.youtube.com/watch?v=PHe0bXAIuk0","type":"primary","dimensions":["conversations","expression","decisions"]},
+    {"id":"S5","title":"Principles for Success","url":"https://www.youtube.com/watch?v=B9XGUpQZY38","type":"primary","dimensions":["conversations","expression","timeline"]},
+    {"id":"S6","title":"Principles by Ray Dalio","url":"https://www.youtube.com/channel/UCqvaXJ1K3HheTPNjH-KpwXQ","type":"primary","dimensions":["timeline","expression"]},
+    {"id":"S7","title":"Principles for Dealing with the Changing World Order","url":"https://www.youtube.com/watch?v=7ivIC01QxtQ","type":"primary","dimensions":["conversations","expression","decisions","timeline"]},
+    {"id":"S8","title":"Ray Dalio biography","url":"https://en.wikipedia.org/wiki/Ray_Dalio","type":"secondary","dimensions":["external","timeline"]},
+    {"id":"S9","title":"Ray Dalio biography","url":"https://www.britannica.com/biography/Ray-Dalio","type":"secondary","dimensions":["external","timeline"]},
+    {"id":"S10","title":"Ray Dalio biography and investing philosophy","url":"https://www.investopedia.com/articles/investing/101715/ray-dalios-top-5-positions-portfolio.asp","type":"secondary","dimensions":["external","timeline"]},
+    {"id":"S11","title":"Ray Dalio on radical truth and transparency","url":"https://www.ted.com/talks/ray_dalio_how_to_build_a_company_where_the_best_ideas_win/discussion","type":"secondary","dimensions":["external","decisions"]},
+    {"id":"S12","title":"Bridgewater founder Ray Dalio steps back from firm","url":"https://www.reuters.com/world/us/bridgewater-founder-ray-dalio-gives-up-control-hedge-fund-firm-2022-10-04/","type":"secondary","dimensions":["external","timeline"]}
+  ]
+}

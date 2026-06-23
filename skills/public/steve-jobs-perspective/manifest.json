@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "slug": "steve-jobs-perspective",
+  "display_name": "Steve Jobs",
+  "aliases": [],
+  "status": "testing",
+  "privacy": "public",
+  "living_person": false,
+  "research_cutoff": "2026-04-05",
+  "legacy_sha256": "317eff0786098c585eba10ab82478da9ed1a2aea22fe43c069c493d628038bec",
+  "council_domains": [
+    "product-taste",
+    "design",
+    "focus"
+  ]
+}

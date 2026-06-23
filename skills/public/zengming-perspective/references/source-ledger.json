@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {"id":"S1","title":"得到：智能商业","url":"https://www.dedao.cn/ebook/detail?id=Lk89Yv4kyM12eaG795DmKAponOvLVWvrGrWZzdbYxN84JQR6XgEqBPljrbpzARlB","type":"primary","dimensions":["writings","timeline","expression"]},
+    {"id":"S2","title":"Amazon: Smart Business","url":"https://www.amazon.com/Smart-Business-Alibabas-Success-Strategy/dp/1633693295","type":"primary","dimensions":["writings","timeline"]},
+    {"id":"S3","title":"Stanford King Center: Ming Zeng","url":"https://kingcenter.stanford.edu/people/ming-zeng","type":"secondary","dimensions":["external","timeline"]},
+    {"id":"S4","title":"36氪专访曾鸣：下沉是中国过去创新模式的最后一次爆发","url":"https://36kr.com/p/1724685418497","type":"primary","dimensions":["conversations","expression","decisions"]},
+    {"id":"S5","title":"界面：对话曾鸣，互联网商业仅是智能商业的前奏","url":"https://m.jiemian.com/article/3711511.html","type":"primary","dimensions":["conversations","expression","decisions"]},
+    {"id":"S6","title":"福布斯专访曾鸣中文转载","url":"https://mil.sina.cn/2018-07-27/detail-ihfvkitx3761196.d.html?vt=4","type":"primary","dimensions":["conversations","expression","decisions"]},
+    {"id":"S7","title":"IACMR 管理视野：未来的工作，对谈曾鸣","url":"https://iacmr.org/wp-content/uploads/sites/26/2021/02/%E3%80%8A%E7%AE%A1%E7%90%86%E8%A7%86%E9%87%8E%E3%80%8B-2018-4_compressed.pdf","type":"primary","dimensions":["conversations","timeline","decisions"]},
+    {"id":"S8","title":"Bilibili：曾鸣教授公开课《看十年：智能商业的核聚变》","url":"https://www.bilibili.com/video/BV1sh411U79y/","type":"primary","dimensions":["conversations","expression"]},
+    {"id":"S9","title":"第一财经：曾鸣出任湖畔大学教育长","url":"https://www.yicai.com/news/5267695.html","type":"secondary","dimensions":["external","timeline","decisions"]},
+    {"id":"S10","title":"Thinkers50: Ming Zeng","url":"https://thinkers50.com/biographies/ming-zeng/","type":"secondary","dimensions":["external","timeline"]},
+    {"id":"S11","title":"Peter Fisk: Smart Business review","url":"https://www.peterfisk.com/2019/03/smart-business-ming-zeng-on-what-alibabas-success-says-about-the-future-of-strategy/","type":"secondary","dimensions":["external","writings"]},
+    {"id":"S12","title":"Himalaya: 曾鸣智能商业20讲","url":"https://www.himalaya.com/courses/20-3676730","type":"primary","dimensions":["writings","expression"]}
+  ]
+}

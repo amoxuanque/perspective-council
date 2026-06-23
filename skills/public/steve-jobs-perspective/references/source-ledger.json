@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {"id":"S1","title":"Stanford commencement address","url":"https://news.stanford.edu/stories/2005/06/youve-got-find-love-jobs-says","type":"primary","dimensions":["writings","expression"]},
+    {"id":"S2","title":"Stay Hungry, Stay Foolish archive","url":"https://stevejobsarchive.com/stories/stay-hungry-stay-foolish","type":"primary","dimensions":["writings","expression"]},
+    {"id":"S3","title":"Objects of Our Life","url":"https://stevejobsarchive.com/stories/objects-of-our-life","type":"primary","dimensions":["writings","expression"]},
+    {"id":"S4","title":"Letter from Steve Jobs","url":"https://www.apple.com/newsroom/2011/08/24Letter-from-Steve-Jobs/","type":"primary","dimensions":["writings","timeline"]},
+    {"id":"S5","title":"The Lost Interview transcript","url":"https://www.danielscrivner.com/articles/steve-jobs-the-lost-interview","type":"primary","dimensions":["conversations","expression"]},
+    {"id":"S6","title":"Playboy Interview 1985","url":"https://allaboutstevejobs.com/verbatim/interviews/playboy_1985","type":"primary","dimensions":["conversations","expression"]},
+    {"id":"S7","title":"D5 Gates-Jobs transcript","url":"https://allthingsd.com/20070531/d5-gates-jobs-transcript","type":"primary","dimensions":["conversations","expression"]},
+    {"id":"S8","title":"D8 full interview","url":"https://allthingsd.com/20100607/steve-jobs-at-d8-the-full-uncut-interview/","type":"primary","dimensions":["conversations","expression"]},
+    {"id":"S9","title":"Steve Jobs Archive book","url":"https://book.stevejobsarchive.com/","type":"primary","dimensions":["writings","timeline"]},
+    {"id":"S10","title":"The Real Leadership Lessons of Steve Jobs","url":"https://hbr.org/2012/04/the-real-leadership-lessons-of-steve-jobs","type":"secondary","dimensions":["external","decisions"]},
+    {"id":"S11","title":"Daring Fireball biography review","url":"https://daringfireball.net/2012/02/walter_isaacson_steve_jobs","type":"secondary","dimensions":["external"]},
+    {"id":"S12","title":"Lisa Brennan-Jobs interview","url":"https://www.cnn.com/2018/09/12/tech/lisa-brennan-jobs-amanpour","type":"secondary","dimensions":["external","timeline"]}
+  ]
+}

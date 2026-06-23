@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {"id":"S1","title":"AlexNet paper","url":"https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S2","title":"Sequence to Sequence Learning","url":"https://arxiv.org/abs/1409.3215","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S3","title":"GPT-2 paper","url":"https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf","type":"primary","dimensions":["writings","timeline"]},
+    {"id":"S4","title":"Weak-to-Strong Generalization","url":"https://openai.com/index/weak-to-strong-generalization/","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S5","title":"Lex Fridman Podcast 94","url":"https://lexfridman.com/ilya-sutskever-transcript/","type":"primary","dimensions":["conversations","expression"]},
+    {"id":"S6","title":"Dwarkesh Patel interview 2023","url":"https://www.dwarkesh.com/p/ilya-sutskever","type":"primary","dimensions":["conversations","expression"]},
+    {"id":"S7","title":"Dwarkesh Patel interview 2025","url":"https://www.dwarkesh.com/p/ilya-sutskever-2","type":"primary","dimensions":["conversations","expression","timeline"]},
+    {"id":"S8","title":"MIT Technology Review interview","url":"https://www.technologyreview.com/2023/10/26/1082398/exclusive-ilya-sutskever-openais-chief-scientist-on-his-hopes-and-fears-for-the-future-of-ai/","type":"primary","dimensions":["conversations","expression"]},
+    {"id":"S9","title":"SSI founding statement","url":"https://ssi.inc/","type":"primary","dimensions":["writings","decisions","timeline"]},
+    {"id":"S10","title":"Superalignment announcement","url":"https://openai.com/index/introducing-superalignment/","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S11","title":"Observation of Generalization","url":"https://simons.berkeley.edu/news/observation-generalization","type":"primary","dimensions":["conversations","writings"]},
+    {"id":"S12","title":"Hinton on Sutskever","url":"https://fortune.com/2024/10/09/openai-sam-altman-geoffrey-hinton-nobel-prize-physics-ilya-sutskever-toronto/","type":"secondary","dimensions":["external","timeline"]}
+  ]
+}

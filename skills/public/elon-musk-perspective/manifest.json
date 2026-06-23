@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "slug": "elon-musk-perspective",
+  "display_name": "Elon Musk",
+  "aliases": [],
+  "status": "testing",
+  "privacy": "public",
+  "living_person": true,
+  "research_cutoff": "2026-04-04",
+  "legacy_sha256": "da803b1bd471841888e4681f3d58f1b50ca2ae2a4307ce1da395288b64ec9742",
+  "council_domains": [
+    "first-principles",
+    "strategy",
+    "execution"
+  ]
+}

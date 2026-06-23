@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "slug": "ilya-sutskever-perspective",
+  "display_name": "Ilya Sutskever",
+  "aliases": [],
+  "status": "testing",
+  "privacy": "public",
+  "living_person": true,
+  "research_cutoff": "2026-04-05",
+  "legacy_sha256": "786f64401fd8a093efa5b2b37873105e7a3f36ecbfce81f8e8c1993c07695da3",
+  "council_domains": [
+    "ai-research",
+    "safety",
+    "technology"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "slug": "munger-perspective",
+  "display_name": "Charlie Munger",
+  "aliases": [],
+  "status": "testing",
+  "privacy": "public",
+  "living_person": false,
+  "research_cutoff": "2026-04-04",
+  "legacy_sha256": "25a371168ebb01464514eb886eef9af2ce66369275f8f5c5d6c3802cfddf5e23",
+  "council_domains": [
+    "risk",
+    "incentives",
+    "decision-making"
+  ]
+}

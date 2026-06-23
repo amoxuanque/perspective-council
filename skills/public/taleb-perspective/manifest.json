@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "slug": "taleb-perspective",
+  "display_name": "Nassim Nicholas Taleb",
+  "aliases": [],
+  "status": "testing",
+  "privacy": "public",
+  "living_person": true,
+  "research_cutoff": "2026-04-04",
+  "legacy_sha256": "c412b217c76f2c66ebd2ef100ff8252059e9e26bcdddad968d031d9a4768028f",
+  "council_domains": [
+    "risk",
+    "uncertainty",
+    "antifragility"
+  ]
+}

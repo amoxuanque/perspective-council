@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "slug": "clayton-christensen-perspective",
+  "display_name": "Clayton Christensen",
+  "aliases": [
+    "Clay Christensen",
+    "克里斯坦森"
+  ],
+  "status": "testing",
+  "privacy": "public",
+  "living_person": false,
+  "research_cutoff": "2026-06-23",
+  "legacy_sha256": null,
+  "council_domains": [
+    "innovation",
+    "product-strategy",
+    "market-entry",
+    "organization-design"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {"id":"S1","title":"What I Worked On","url":"https://www.paulgraham.com/worked.html","type":"primary","dimensions":["writings","decisions","timeline"]},
+    {"id":"S2","title":"Founder Mode","url":"https://paulgraham.com/foundermode.html","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S3","title":"Writes and Write-Nots","url":"https://paulgraham.com/writes.html","type":"primary","dimensions":["writings","expression"]},
+    {"id":"S4","title":"Superlinear Returns","url":"https://paulgraham.com/superlinear.html","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S5","title":"How to Do Great Work","url":"https://paulgraham.com/greatwork.html","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S6","title":"Maker's Schedule, Manager's Schedule","url":"https://paulgraham.com/makersschedule.html","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S7","title":"Startup = Growth","url":"https://paulgraham.com/growth.html","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S8","title":"Before the Startup","url":"https://paulgraham.com/before.html","type":"primary","dimensions":["writings","conversations"]},
+    {"id":"S9","title":"Keep Your Identity Small","url":"https://paulgraham.com/identity.html","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S10","title":"Conversations with Tyler","url":"https://conversationswithtyler.com/episodes/paul-graham/","type":"primary","dimensions":["conversations","expression"]},
+    {"id":"S11","title":"YC conversation with Paul Graham","url":"https://www.ycombinator.com/blog/a-conversation-with-paul-graham-moderated-by-geoff-ralston/","type":"primary","dimensions":["conversations","expression"]},
+    {"id":"S12","title":"Founder Mode analysis","url":"https://fortune.com/2024/09/01/paul-graham-founder-mode-silicon-valley-conventional-wisdom-manager-mode/","type":"secondary","dimensions":["external","timeline"]},
+    {"id":"S13","title":"Income inequality criticism","url":"https://www.inc.com/jeff-bercovici/paul-graham-wrong-inequality.html","type":"secondary","dimensions":["external"]}
+  ]
+}

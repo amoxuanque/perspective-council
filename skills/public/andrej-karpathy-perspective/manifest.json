@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "slug": "andrej-karpathy-perspective",
+  "display_name": "Andrej Karpathy",
+  "aliases": [],
+  "status": "testing",
+  "privacy": "public",
+  "living_person": true,
+  "research_cutoff": "2026-04-05",
+  "legacy_sha256": "0166d6f052cccfa034ab98bbe472276859feb7812bb6dcfd9c60c2bc5b63221b",
+  "council_domains": [
+    "ai-technology",
+    "engineering",
+    "product"
+  ]
+}

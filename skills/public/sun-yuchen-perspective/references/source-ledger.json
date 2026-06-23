@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "S1",
+      "title": "这世界既残酷也温柔",
+      "url": "https://www.amazon.com/%E8%BF%99%E4%B8%96%E7%95%8C%E6%97%A2%E6%AE%8B%E9%85%B7%E4%B9%9F%E6%B8%A9%E6%9F%94-%E5%AD%99%E5%AE%87%E6%99%A8/dp/B01LTICE1E",
+      "type": "primary",
+      "dimensions": ["writings", "timeline"]
+    },
+    {
+      "id": "S2",
+      "title": "TRON founder graduates Hupan University",
+      "url": "https://medium.com/tron-foundation/tron-founder-justin-sun-graduates-hupan-university-forges-ahead-f30365cba768",
+      "type": "primary",
+      "dimensions": ["writings", "timeline"]
+    },
+    {
+      "id": "S3",
+      "title": "Thought Economics interview",
+      "url": "https://thoughteconomics.com/justin-sun-tron-bittorrent/",
+      "type": "primary",
+      "dimensions": ["conversations", "expression"]
+    },
+    {
+      "id": "S4",
+      "title": "Justin Sun on X",
+      "url": "https://x.com/justinsuntron",
+      "type": "primary",
+      "dimensions": ["writings", "expression", "timeline"]
+    },
+    {
+      "id": "S5",
+      "title": "TRON Foundation Medium",
+      "url": "https://medium.com/tron-foundation",
+      "type": "primary",
+      "dimensions": ["writings", "timeline"]
+    },
+    {
+      "id": "S6",
+      "title": "SEC press release 2023-59",
+      "url": "https://www.sec.gov/newsroom/press-releases/2023-59",
+      "type": "primary",
+      "dimensions": ["decisions", "timeline"]
+    },
+    {
+      "id": "S7",
+      "title": "Fortune on diplomat status and SEC lawsuit",
+      "url": "https://fortune.com/crypto/2023/03/31/his-excellency-sec-lawsuit-justin-sun-grenada-diplomat-wto/",
+      "type": "secondary",
+      "dimensions": ["external", "timeline"]
+    },
+    {
+      "id": "S8",
+      "title": "The Verge investigation",
+      "url": "https://www.theverge.com/2022/3/3/22948420/justin-sun-tron-crypto-billionaire-drama-investigation",
+      "type": "secondary",
+      "dimensions": ["external"]
+    },
+    {
+      "id": "S9",
+      "title": "Bloomberg on Justin Sun and Trump world",
+      "url": "https://www.bloomberg.com/news/articles/2025-12-11/from-crypto-pariah-to-trump-moneyman-justin-sun-s-reinvention",
+      "type": "secondary",
+      "dimensions": ["external", "timeline"]
+    },
+    {
+      "id": "S10",
+      "title": "Protos on diplomatic immunity claims",
+      "url": "https://protos.com/scoop-justin-sun-falsely-claimed-diplomatic-immunity-in-lawsuit/",
+      "type": "secondary",
+      "dimensions": ["external", "decisions"]
+    }
+  ]
+}

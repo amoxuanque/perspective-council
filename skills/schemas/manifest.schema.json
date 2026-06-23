@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://perspective-council.local/schemas/manifest.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "slug",
+    "display_name",
+    "status",
+    "privacy",
+    "living_person",
+    "research_cutoff",
+    "legacy_sha256"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*-perspective$" },
+    "display_name": { "type": "string", "minLength": 1 },
+    "aliases": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "status": { "enum": ["draft", "research-review", "synthesis-review", "testing", "ready", "retired"] },
+    "privacy": { "enum": ["public", "private"] },
+    "living_person": { "type": "boolean" },
+    "research_cutoff": { "type": "string", "format": "date" },
+    "legacy_sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+    "council_domains": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+  }
+}

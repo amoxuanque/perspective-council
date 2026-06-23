@@ -1,4 +1,12 @@
 node_modules/
 dist/
+__pycache__/
+*.pyc
 .env
 .env.local
+
+# Full Amo profile and its source material stay local.
+skills/private/
+docs/g1/
+docs/planning/
+docs/skill-quality-audit-2026-06-22.md

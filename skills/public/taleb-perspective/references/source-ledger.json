@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "S1",
+      "title": "The Intellectual Yet Idiot",
+      "url": "https://medium.com/incerto/the-intellectual-yet-idiot-13211e2d0577",
+      "type": "primary",
+      "dimensions": ["writings", "expression"]
+    },
+    {
+      "id": "S2",
+      "title": "The Most Intolerant Wins",
+      "url": "https://medium.com/incerto/the-most-intolerant-wins-the-dictatorship-of-the-small-minority-3f1f83ce4e15",
+      "type": "primary",
+      "dimensions": ["writings", "expression"]
+    },
+    {
+      "id": "S3",
+      "title": "The Logic of Risk Taking",
+      "url": "https://medium.com/incerto/the-logic-of-risk-taking-107bf41029d3",
+      "type": "primary",
+      "dimensions": ["writings", "expression"]
+    },
+    {
+      "id": "S4",
+      "title": "The Fourth Quadrant",
+      "url": "https://www.edge.org/conversation/nassim_nicholas_taleb-the-fourth-quadrant-a-map-of-the-limits-of-statistics",
+      "type": "primary",
+      "dimensions": ["conversations", "writings"]
+    },
+    {
+      "id": "S5",
+      "title": "Statistical Consequences of Fat Tails",
+      "url": "https://arxiv.org/abs/2001.10488",
+      "type": "primary",
+      "dimensions": ["writings", "decisions"]
+    },
+    {
+      "id": "S6",
+      "title": "Precautionary Principle and GMO",
+      "url": "https://arxiv.org/abs/1410.5787",
+      "type": "primary",
+      "dimensions": ["writings", "decisions"]
+    },
+    {
+      "id": "S7",
+      "title": "NassimTaleb.org 2025 archive",
+      "url": "https://nassimtaleb.org/2025/",
+      "type": "primary",
+      "dimensions": ["timeline", "writings"]
+    },
+    {
+      "id": "S8",
+      "title": "NassimTaleb.org March 2026",
+      "url": "https://nassimtaleb.org/2026/03/",
+      "type": "primary",
+      "dimensions": ["timeline", "writings"]
+    },
+    {
+      "id": "S9",
+      "title": "Nassim Taleb on X",
+      "url": "https://x.com/nntaleb",
+      "type": "primary",
+      "dimensions": ["expression", "timeline"]
+    },
+    {
+      "id": "S10",
+      "title": "Nassim Taleb: Antifragile Thinking",
+      "url": "https://fs.blog/intellectual-giants/nassim-taleb/",
+      "type": "secondary",
+      "dimensions": ["external", "writings"]
+    },
+    {
+      "id": "S11",
+      "title": "Why Is Nassim Taleb So Venomous on Twitter?",
+      "url": "https://www.discovermagazine.com/environment/why-is-nassim-taleb-so-venomous-on-twitter",
+      "type": "secondary",
+      "dimensions": ["external", "expression"]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "slug": "zhangxuefeng-perspective",
+  "display_name": "张雪峰",
+  "aliases": [],
+  "status": "testing",
+  "privacy": "public",
+  "living_person": false,
+  "research_cutoff": "2026-04-05",
+  "legacy_sha256": "7dbd490302d78245e1995f62cdd43fa63b434c44c8868091a8e8bb5fc3694b61",
+  "council_domains": [
+    "education",
+    "career",
+    "communication"
+  ]
+}

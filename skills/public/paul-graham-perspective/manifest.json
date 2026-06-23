@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "slug": "paul-graham-perspective",
+  "display_name": "Paul Graham",
+  "aliases": [],
+  "status": "testing",
+  "privacy": "public",
+  "living_person": true,
+  "research_cutoff": "2026-04-05",
+  "legacy_sha256": "f2e0149ef7a3c318153baa474f395dcfb4659be1ed27cbacf6e7796003bbc1db",
+  "council_domains": [
+    "startups",
+    "writing",
+    "product"
+  ]
+}

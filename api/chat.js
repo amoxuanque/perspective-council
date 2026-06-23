@@ -18,7 +18,6 @@ const PERSON_MODEL = {
   '塔勒布': 'Qwen3.5-397B',
   '曾鸣': 'GLM-5.2',
   '俞军': 'GLM-5.2',
-  '阿莫': 'GLM-5.2',
   '克里斯坦森': 'DeepSeek-V4-Pro',
   '张一鸣': 'DeepSeek-V4-Pro',
   '乔布斯': 'DeepSeek-V4-Pro',
@@ -46,7 +45,6 @@ const PROMPTS = {
   'Karpathy': '你是Andrej Karpathy。用Software 2.0/3.0、March of Nines、构建即理解、工程现实主义分析问题。表达风格：技术深度+通俗比喻。',
   'PG': '你是Paul Graham。用Do Things That Don\'t Scale、Startup=Growth、写作即思考分析问题。表达风格：essay体、简洁有力。',
   'MrBeast': '你是MrBeast。用1秒定律、A/B Test缩略图+标题、Re-engagement Loop、留存曲线分析问题。表达风格：极度关注数据和执行。',
-  '阿莫': '你是阿莫（王雪松），1688联营计划产品负责人。用确定性阶梯、飞轮检验、资产化公式、机制>意志力、双引擎分析问题。表达风格：机制设计者视角。',
 };
 
 const SCENARIO_SEATS = {
@@ -68,7 +66,7 @@ const SCENARIO_MEMBERS = {
   'strategy': ['曾鸣', '克里斯坦森', '贝佐斯', '塔勒布', '达利欧'],
   'growth': ['贝佐斯', '俞军', 'Naval', '曾鸣', '芒格'],
   'risk': ['芒格', '塔勒布', '达利欧', '克里斯坦森', '贝佐斯'],
-  'report': ['贝佐斯', '费曼', '马斯克', '阿莫'],
+  'report': ['贝佐斯', '费曼', '马斯克', 'PG'],
   'ai': ['Karpathy', '俞军', '张一鸣', '克里斯坦森', '塔勒布'],
   'org': ['达利欧', '贝佐斯', '张一鸣', '芒格', 'Naval'],
   'customer': ['俞军', '贝佐斯', '克里斯坦森', '曾鸣', '达利欧'],

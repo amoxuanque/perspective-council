@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {"id":"S1","title":"Amazon's original 1997 letter to shareholders","url":"https://www.aboutamazon.com/news/company-news/amazons-original-1997-letter-to-shareholders","type":"primary","dimensions":["writings","decisions","timeline"]},
+    {"id":"S2","title":"2016 Letter to Shareholders","url":"https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S3","title":"2020 Letter to Shareholders","url":"https://www.aboutamazon.com/news/company-news/2020-letter-to-shareholders","type":"primary","dimensions":["writings","decisions","expression"]},
+    {"id":"S4","title":"Amazon shareholder letters archive","url":"https://www.aboutamazon.com/news/company-news/a-complete-collection-of-jeff-bezos-shareholder-letters","type":"primary","dimensions":["writings","timeline"]},
+    {"id":"S5","title":"Princeton Baccalaureate remarks by Jeff Bezos","url":"https://www.princeton.edu/news/2010/05/30/baccalaureate-address-jeff-bezos-princeton-class-2010","type":"primary","dimensions":["writings","expression","timeline"]},
+    {"id":"S6","title":"Jeff Bezos: Amazon and Blue Origin | Lex Fridman Podcast transcript","url":"https://lexfridman.com/jeff-bezos-transcript","type":"primary","dimensions":["conversations","expression","decisions"]},
+    {"id":"S7","title":"Amazon Leadership Principles","url":"https://aws.amazon.com/executive-insights/content/amazon-leadership-principles/","type":"primary","dimensions":["writings","expression","decisions"]},
+    {"id":"S8","title":"Amazon officers and directors","url":"https://ir.aboutamazon.com/officers-and-directors/default.aspx","type":"primary","dimensions":["timeline"]},
+    {"id":"S9","title":"Blue Origin","url":"https://www.blueorigin.com/","type":"primary","dimensions":["timeline","decisions"]},
+    {"id":"S10","title":"Blue Origin successfully completes NS-32 mission","url":"https://www.blueorigin.com/news/blue-origin-successfully-completes-ns-32-mission","type":"primary","dimensions":["timeline","decisions"]},
+    {"id":"S11","title":"Blue Origin successfully completes second New Glenn mission","url":"https://www.blueorigin.com/news/blue-origin-successfully-completes-second-new-glenn-mission","type":"primary","dimensions":["timeline","decisions"]},
+    {"id":"S12","title":"Bezos Earth Fund","url":"https://www.bezosearthfund.org/","type":"primary","dimensions":["timeline","decisions"]},
+    {"id":"S13","title":"Bezos Earth Fund announces phase I grantees and AI grand challenge","url":"https://www.bezosearthfund.org/news-and-insights/bezos-earth-fund-announces-phase-i-grantees-and-ai-grand-challenge","type":"primary","dimensions":["timeline","decisions"]},
+    {"id":"S14","title":"FTC sues Amazon for illegally maintaining monopoly power","url":"https://www.ftc.gov/news-events/news/press-releases/2023/09/ftc-sues-amazon-illegally-maintaining-monopoly-power","type":"secondary","dimensions":["external","decisions"]},
+    {"id":"S15","title":"Jeff Bezos biography","url":"https://www.britannica.com/biography/Jeff-Bezos","type":"secondary","dimensions":["external","timeline"]},
+    {"id":"S16","title":"FTC takes action against Amazon for enrolling consumers in Prime without consent","url":"https://www.ftc.gov/news-events/news/press-releases/2023/06/ftc-takes-action-against-amazon-enrolling-consumers-amazon-prime-without-consent-sabotaging-their","type":"secondary","dimensions":["external","timeline"]}
+  ]
+}

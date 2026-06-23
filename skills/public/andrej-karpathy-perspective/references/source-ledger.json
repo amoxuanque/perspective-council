@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {"id":"S1","title":"Software 2.0","url":"https://karpathy.medium.com/software-2-0-a64152b37c35","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S2","title":"Neural Networks: Zero to Hero","url":"https://karpathy.ai/zero-to-hero.html","type":"primary","dimensions":["writings","expression"]},
+    {"id":"S3","title":"nn-zero-to-hero repository","url":"https://github.com/karpathy/nn-zero-to-hero","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S4","title":"Vibe coding original post","url":"https://x.com/karpathy/status/1886192184808149383","type":"primary","dimensions":["writings","expression","decisions"]},
+    {"id":"S5","title":"nanoGPT repository","url":"https://github.com/karpathy/nanoGPT","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S6","title":"llm.c repository","url":"https://github.com/karpathy/llm.c","type":"primary","dimensions":["writings","decisions"]},
+    {"id":"S7","title":"Eureka Labs","url":"https://eurekalabs.ai/","type":"primary","dimensions":["writings","decisions","timeline"]},
+    {"id":"S8","title":"Recipe for Training Neural Networks","url":"https://karpathy.github.io/2019/04/25/recipe/","type":"primary","dimensions":["writings","expression"]},
+    {"id":"S9","title":"Lex Fridman conversation","url":"https://lexfridman.com/andrej-karpathy/","type":"primary","dimensions":["conversations","expression"]},
+    {"id":"S10","title":"Software Is Changing Again","url":"https://www.ycombinator.com/library/MW-andrej-karpathy-software-is-changing-again","type":"primary","dimensions":["conversations","writings"]},
+    {"id":"S11","title":"Dwarkesh conversation","url":"https://www.dwarkesh.com/p/andrej-karpathy","type":"primary","dimensions":["conversations","expression"]},
+    {"id":"S12","title":"OpenAI departure report","url":"https://techcrunch.com/2024/02/13/andrej-karpathy-is-leaving-openai-again-but-he-says-there-was-no-drama/","type":"secondary","dimensions":["external","timeline"]},
+    {"id":"S13","title":"Eureka Labs launch report","url":"https://techcrunch.com/2024/07/16/after-tesla-and-openai-andrej-karpathys-startup-aims-to-apply-ai-assistants-to-education/","type":"secondary","dimensions":["external","timeline"]}
+  ]
+}

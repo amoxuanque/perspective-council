@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "python3 -m unittest discover -s tests -p 'test_*.py'",
+    "validate:skills": "python3 scripts/validate_skills.py skills/public"
   },
   "dependencies": {
     "react": "^18.3.1",

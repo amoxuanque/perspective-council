@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Lex Fridman Podcast #351 - MrBeast",
+      "url": "https://lexfridman.com/mrbeast/",
+      "type": "primary",
+      "dimensions": ["conversations", "expression"]
+    },
+    {
+      "id": "S2",
+      "title": "Colin and Samir transcript",
+      "url": "https://singjupost.com/colin-and-samir-show-with-mrbeast-transcript/",
+      "type": "primary",
+      "dimensions": ["conversations", "expression"]
+    },
+    {
+      "id": "S3",
+      "title": "An Unfiltered Conversation with MrBeast",
+      "url": "https://www.colinandsamir.com/resources/an-unfiltered-conversation-with-mrbeast",
+      "type": "primary",
+      "dimensions": ["conversations", "expression"]
+    },
+    {
+      "id": "S4",
+      "title": "Diary of a CEO transcript",
+      "url": "https://podscripts.co/podcasts/the-diary-of-a-ceo-with-steven-bartlett/mrbeast-if-you-want-to-be-liked-dont-help-people-i-lost-tens-of-millions-on-beast-games-but-im-worth-1-billion",
+      "type": "primary",
+      "dimensions": ["conversations", "expression", "timeline"]
+    },
+    {
+      "id": "S5",
+      "title": "TIME interview",
+      "url": "https://time.com/collections/time100-leadership-series/6693255/mrbeast-interview/",
+      "type": "primary",
+      "dimensions": ["conversations", "expression"]
+    },
+    {
+      "id": "S6",
+      "title": "How to Succeed in MrBeast Production",
+      "url": "https://archive.org/details/how-to-succeed-in-mr-beast-production/mode/1up",
+      "type": "primary",
+      "dimensions": ["writings", "expression"]
+    },
+    {
+      "id": "S7",
+      "title": "MrBeast on X - thumbnail testing",
+      "url": "https://x.com/MrBeast/status/1699460698726613343",
+      "type": "primary",
+      "dimensions": ["writings", "expression"]
+    },
+    {
+      "id": "S8",
+      "title": "MrBeast on X - editing style",
+      "url": "https://x.com/MrBeast/status/1774114267261767898",
+      "type": "primary",
+      "dimensions": ["writings", "expression"]
+    },
+    {
+      "id": "S9",
+      "title": "Multi-language audio interview",
+      "url": "https://blog.youtube/news-and-events/multi-language-audio-mrbeast-interview/",
+      "type": "primary",
+      "dimensions": ["decisions", "timeline"]
+    },
+    {
+      "id": "S10",
+      "title": "Beast Games season 2 and 3 renewal",
+      "url": "https://www.aboutamazon.com/news/entertainment/mrbeast-prime-video-beast-games-season-2-and-3",
+      "type": "secondary",
+      "dimensions": ["decisions", "timeline"]
+    },
+    {
+      "id": "S11",
+      "title": "MrBeast Burger lawsuit",
+      "url": "https://www.cnn.com/2023/08/02/business/mrbeast-burger-lawsuit",
+      "type": "secondary",
+      "dimensions": ["external", "decisions"]
+    },
+    {
+      "id": "S12",
+      "title": "MrBeast business empire analysis",
+      "url": "https://fortune.com/2025/02/27/mrbeast-jimmy-donaldson-businesses-feastables-video-production-sales-revenue-valuation/",
+      "type": "secondary",
+      "dimensions": ["external", "timeline"]
+    }
+  ]
+}

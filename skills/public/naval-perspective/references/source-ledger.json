@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "S1",
+      "title": "The Almanack of Naval Ravikant",
+      "url": "https://navalmanack.s3.amazonaws.com/Eric-Jorgenson_The-Almanack-of-Naval-Ravikant_Final.pdf",
+      "type": "primary",
+      "dimensions": ["writings", "expression"]
+    },
+    {
+      "id": "S2",
+      "title": "How to Get Rich",
+      "url": "https://nav.al/rich",
+      "type": "primary",
+      "dimensions": ["writings", "expression"]
+    },
+    {
+      "id": "S3",
+      "title": "Specific Knowledge",
+      "url": "https://nav.al/specific-knowledge",
+      "type": "primary",
+      "dimensions": ["writings", "expression"]
+    },
+    {
+      "id": "S4",
+      "title": "Life Formulas I",
+      "url": "https://nav.al/life-formulas-i",
+      "type": "primary",
+      "dimensions": ["writings", "timeline"]
+    },
+    {
+      "id": "S5",
+      "title": "Tim Ferriss transcript #97",
+      "url": "https://tim.blog/naval-ravikant-on-the-tim-ferriss-show-transcript/",
+      "type": "primary",
+      "dimensions": ["conversations", "expression"]
+    },
+    {
+      "id": "S6",
+      "title": "Tim Ferriss transcript #473",
+      "url": "https://tim.blog/2020/10/15/naval-transcript/",
+      "type": "primary",
+      "dimensions": ["conversations", "expression"]
+    },
+    {
+      "id": "S7",
+      "title": "Sovereign Child",
+      "url": "https://tim.blog/2025/01/18/naval-ravikant-sovereign-child/",
+      "type": "primary",
+      "dimensions": ["conversations", "timeline"]
+    },
+    {
+      "id": "S8",
+      "title": "Knowledge Project #18",
+      "url": "https://fs.blog/knowledge-project-podcast/naval-ravikant/",
+      "type": "primary",
+      "dimensions": ["conversations", "expression"]
+    },
+    {
+      "id": "S9",
+      "title": "Modern Wisdom #922 notes",
+      "url": "https://podcastnotes.org/modern-wisdom/44-harsh-truths-about-human-nature-naval-ravikant-modern-wisdom-with-chris-williamson/",
+      "type": "secondary",
+      "dimensions": ["conversations", "timeline"]
+    },
+    {
+      "id": "S10",
+      "title": "Naval Quotes & Insights",
+      "url": "https://www.sloww.co/naval-ravikant/",
+      "type": "secondary",
+      "dimensions": ["external", "expression"]
+    }
+  ]
+}

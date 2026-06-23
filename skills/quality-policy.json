@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "required_research_files": [
+    "01-writings.md",
+    "02-conversations.md",
+    "03-expression-dna.md",
+    "04-external-views.md",
+    "05-decisions.md",
+    "06-timeline.md"
+  ],
+  "minimum_referenced_research_chars": 1000,
+  "minimum_unique_sources": 10,
+  "minimum_primary_source_ratio_exclusive": 0.5,
+  "mental_models": { "minimum": 3, "maximum": 7 },
+  "decision_heuristics": { "minimum": 5, "maximum": 10 },
+  "minimum_tensions": 2,
+  "minimum_honest_boundaries": 3,
+  "required_tests": { "known": 3, "edge": 1, "voice": 1 }
+}

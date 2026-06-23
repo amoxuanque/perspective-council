@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Tesla Secret Master Plan",
+      "url": "https://www.tesla.com/secret-master-plan",
+      "type": "primary",
+      "dimensions": ["writings", "timeline"]
+    },
+    {
+      "id": "S2",
+      "title": "Tesla Master Plan Part Deux",
+      "url": "https://www.tesla.com/master-plan-part-deux",
+      "type": "primary",
+      "dimensions": ["writings", "timeline"]
+    },
+    {
+      "id": "S3",
+      "title": "Tesla Proxy 2025",
+      "url": "https://ir.tesla.com/_flysystem/s3/sec/000110465925087598/tm252289-4_pre14a.htm",
+      "type": "primary",
+      "dimensions": ["writings", "timeline"]
+    },
+    {
+      "id": "S4",
+      "title": "Elon Musk on X",
+      "url": "https://x.com/elonmusk",
+      "type": "primary",
+      "dimensions": ["expression", "timeline"]
+    },
+    {
+      "id": "S5",
+      "title": "Lex Fridman Podcast #400 transcript",
+      "url": "https://lexfridman.com/elon-musk-4-transcript/",
+      "type": "primary",
+      "dimensions": ["conversations", "expression"]
+    },
+    {
+      "id": "S6",
+      "title": "TED 2022 interview",
+      "url": "https://blog.ted.com/elon-musk-talks-twitter-tesla-and-the-future-at-ted2022/",
+      "type": "primary",
+      "dimensions": ["conversations", "expression"]
+    },
+    {
+      "id": "S7",
+      "title": "Joe Rogan Experience #1470 transcript",
+      "url": "https://podcasts.happyscribe.com/happy-scribe-s-favorites/joe-rogan-experience-1470-elon-musk",
+      "type": "primary",
+      "dimensions": ["conversations", "expression"]
+    },
+    {
+      "id": "S8",
+      "title": "C-SPAN clip on correction and error",
+      "url": "https://www.c-span.org/clip/white-house-event/elon-musk-some-of-the-things-that-i-say-will-be-incorrect-and-should-be-corrected/5153211",
+      "type": "primary",
+      "dimensions": ["conversations", "expression"]
+    },
+    {
+      "id": "S9",
+      "title": "Davos 2026 conversation",
+      "url": "https://www.weforum.org/podcasts/meet-the-leader/episodes/conversation-with-elon-musk-davos-2026/",
+      "type": "primary",
+      "dimensions": ["conversations", "timeline"]
+    },
+    {
+      "id": "S10",
+      "title": "Walter Isaacson on Musk legacy",
+      "url": "https://time.com/6458925/walter-isaacson-elon-musks-legacy-biography/",
+      "type": "secondary",
+      "dimensions": ["external", "timeline"]
+    }
+  ]
+}

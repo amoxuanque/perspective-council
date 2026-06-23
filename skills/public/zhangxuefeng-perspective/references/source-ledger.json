@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "S1",
+      "title": "你离考研成功，就差这本书",
+      "url": "https://book.douban.com/subject/26897898/",
+      "type": "primary",
+      "dimensions": ["writings", "timeline"]
+    },
+    {
+      "id": "S2",
+      "title": "方向比努力更重要",
+      "url": "https://book.douban.com/subject/35416003/",
+      "type": "primary",
+      "dimensions": ["writings", "timeline"]
+    },
+    {
+      "id": "S3",
+      "title": "选择比努力更重要",
+      "url": "https://book.douban.com/subject/35727534/",
+      "type": "primary",
+      "dimensions": ["writings", "timeline"]
+    },
+    {
+      "id": "S4",
+      "title": "演说家考研演讲完整版",
+      "url": "https://www.bilibili.com/video/av12938458/",
+      "type": "primary",
+      "dimensions": ["conversations", "expression"]
+    },
+    {
+      "id": "S5",
+      "title": "风波之后的张雪峰：倔强的寒蝉",
+      "url": "https://www.jiemian.com/article/10635199.html",
+      "type": "primary",
+      "dimensions": ["conversations", "expression", "external"]
+    },
+    {
+      "id": "S6",
+      "title": "中国新闻周刊采访",
+      "url": "https://www.inewsweek.cn/people/2023-06-19/18705.shtml",
+      "type": "primary",
+      "dimensions": ["conversations", "external"]
+    },
+    {
+      "id": "S7",
+      "title": "张雪峰：寒门讲师的商业跃迁",
+      "url": "https://www.jiemian.com/article/14158150.html",
+      "type": "secondary",
+      "dimensions": ["external", "timeline"]
+    },
+    {
+      "id": "S8",
+      "title": "从寒门北漂到全网升学指路官",
+      "url": "https://www.21jingji.com/article/20260326/herald/e7302f9dfd83337e6d6fa83ebfc53c95.html",
+      "type": "secondary",
+      "dimensions": ["external", "timeline"]
+    },
+    {
+      "id": "S9",
+      "title": "张雪峰离世，一个时代最复杂的教育符号",
+      "url": "https://www.tmtpost.com/7927689.html",
+      "type": "secondary",
+      "dimensions": ["external", "timeline"]
+    },
+    {
+      "id": "S10",
+      "title": "讲现实的张雪峰离世，他留下的生意与争议",
+      "url": "https://www.lifeweek.com.cn/h5/article/detail.do?artId=264171",
+      "type": "secondary",
+      "dimensions": ["external", "timeline"]
+    }
+  ]
+}

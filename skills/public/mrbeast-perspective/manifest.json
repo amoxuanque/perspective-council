@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "slug": "mrbeast-perspective",
+  "display_name": "MrBeast",
+  "aliases": [],
+  "status": "testing",
+  "privacy": "public",
+  "living_person": true,
+  "research_cutoff": "2026-04-30",
+  "legacy_sha256": "37d7da16655e5f7486e11267673e7a19b255086327bb282224173dec60f21980",
+  "council_domains": [
+    "attention",
+    "content",
+    "growth"
+  ]
+}

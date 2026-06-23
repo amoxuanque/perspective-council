@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "slug": "yujun-perspective",
+  "display_name": "俞军",
+  "aliases": [
+    "Yu Jun",
+    "Jun Yu",
+    "俞军产品方法论"
+  ],
+  "status": "testing",
+  "privacy": "public",
+  "living_person": true,
+  "research_cutoff": "2026-06-23",
+  "legacy_sha256": null,
+  "council_domains": [
+    "product-management",
+    "user-value",
+    "commercialization",
+    "decision-making"
+  ]
+}

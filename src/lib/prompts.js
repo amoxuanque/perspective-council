@@ -15,5 +15,4 @@ export const persons = {
   'Karpathy': { avatar: '🧠', tagline: 'Software 2.0 · 工程现实主义' },
   'PG': { avatar: '✍️', tagline: '写作即思考 · Do Things That Don\'t Scale' },
   'MrBeast': { avatar: '🎥', tagline: 'Hook公式 · 留存曲线优化' },
-  '阿莫': { avatar: '🔧', tagline: '确定性阶梯 · 机制设计' },
 }

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "skills": [
+    {"slug":"andrej-karpathy-perspective","display_name":"Andrej Karpathy","living_person":true,"research_cutoff":"2026-04-05","council_domains":["ai-technology","engineering","product"]},
+    {"slug":"clayton-christensen-perspective","display_name":"Clayton Christensen","living_person":false,"research_cutoff":"2026-06-23","council_domains":["innovation","strategy","disruption","jobs-to-be-done"]},
+    {"slug":"elon-musk-perspective","display_name":"Elon Musk","living_person":true,"research_cutoff":"2026-04-04","council_domains":["first-principles","strategy","execution"]},
+    {"slug":"feynman-perspective","display_name":"Richard Feynman","living_person":false,"research_cutoff":"2026-04-04","council_domains":["explanation","verification","critical-thinking"]},
+    {"slug":"ilya-sutskever-perspective","display_name":"Ilya Sutskever","living_person":true,"research_cutoff":"2026-04-05","council_domains":["ai-research","safety","technology"]},
+    {"slug":"jeff-bezos-perspective","display_name":"Jeff Bezos","living_person":true,"research_cutoff":"2026-06-23","council_domains":["customer-obsession","commercialization","long-term-compounding","organization-design"]},
+    {"slug":"mrbeast-perspective","display_name":"MrBeast","living_person":true,"research_cutoff":"2026-04-30","council_domains":["attention","content","growth"]},
+    {"slug":"munger-perspective","display_name":"Charlie Munger","living_person":false,"research_cutoff":"2026-04-04","council_domains":["risk","incentives","decision-making"]},
+    {"slug":"naval-perspective","display_name":"Naval Ravikant","living_person":true,"research_cutoff":"2026-04-04","council_domains":["leverage","wealth","life-strategy"]},
+    {"slug":"paul-graham-perspective","display_name":"Paul Graham","living_person":true,"research_cutoff":"2026-04-05","council_domains":["startups","writing","product"]},
+    {"slug":"ray-dalio-perspective","display_name":"Ray Dalio","living_person":true,"research_cutoff":"2026-06-23","council_domains":["risk","macro","organization-design","decision-making"]},
+    {"slug":"steve-jobs-perspective","display_name":"Steve Jobs","living_person":false,"research_cutoff":"2026-04-05","council_domains":["product-taste","design","focus"]},
+    {"slug":"sun-yuchen-perspective","display_name":"Justin Sun","living_person":true,"research_cutoff":"2026-04-07","council_domains":["attention","crypto","deal-making"]},
+    {"slug":"taleb-perspective","display_name":"Nassim Nicholas Taleb","living_person":true,"research_cutoff":"2026-04-04","council_domains":["risk","uncertainty","antifragility"]},
+    {"slug":"trump-perspective","display_name":"Donald Trump","living_person":true,"research_cutoff":"2026-04-30","council_domains":["negotiation","attention","power"]},
+    {"slug":"yujun-perspective","display_name":"俞军","living_person":true,"research_cutoff":"2026-06-23","council_domains":["product-management","user-value","commercialization","decision-making"]},
+    {"slug":"zengming-perspective","display_name":"曾鸣","living_person":true,"research_cutoff":"2026-06-23","council_domains":["strategy","smart-business","platform-ecosystems","organization-design"]},
+    {"slug":"zhang-yiming-perspective","display_name":"张一鸣","living_person":true,"research_cutoff":"2026-04-06","council_domains":["organization","product","globalization"]},
+    {"slug":"zhangxuefeng-perspective","display_name":"张雪峰","living_person":true,"research_cutoff":"2026-04-05","council_domains":["education","career","communication"]}
+  ]
+}
