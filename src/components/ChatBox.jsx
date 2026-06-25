@@ -1,8 +1,14 @@
 import { useState, useRef, useEffect } from 'react'
-import { Send, Paperclip, X } from 'lucide-react'
+import { Send, Paperclip, X, Star } from 'lucide-react'
 import MessageBubble from './MessageBubble'
 import { persons } from '../lib/prompts'
 import { MODES } from '../lib/constants'
+
+const FAVORITES_KEY = 'perspective-council:favorites'
+
+function createId() {
+  return globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`
+}
 
 export default function ChatBox({ scenario }) {
   const [messages, setMessages] = useState([])
@@ -11,12 +17,45 @@ export default function ChatBox({ scenario }) {
   const [fileContents, setFileContents] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const [mode, setMode] = useState('standard')
+  const [showFavorites, setShowFavorites] = useState(false)
+  const [favorites, setFavorites] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem(FAVORITES_KEY) || '[]')
+    } catch {
+      return []
+    }
+  })
   const messagesEndRef = useRef(null)
   const fileInputRef = useRef(null)
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages])
+
+  useEffect(() => {
+    localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites))
+  }, [favorites])
+
+  const toggleFavorite = (message) => {
+    if (!message?.id || !message?.question) return
+    setFavorites(prev => {
+      if (prev.some(item => item.id === message.id)) {
+        return prev.filter(item => item.id !== message.id)
+      }
+      return [
+        {
+          id: message.id,
+          role: 'assistant',
+          question: message.question,
+          rounds: message.rounds || [],
+          error: message.error,
+          scenarioTitle: scenario.title,
+          createdAt: new Date().toISOString()
+        },
+        ...prev
+      ]
+    })
+  }
 
   const handleFileUpload = async (e) => {
     const newFiles = Array.from(e.target.files)
@@ -46,7 +85,9 @@ export default function ChatBox({ scenario }) {
     if (!input.trim() && fileContents.length === 0) return
     if (isLoading) return
 
-    const userMsg = { role: 'user', content: input, files: files.map(f => f.name) }
+    const questionText = input
+    const exchangeId = createId()
+    const userMsg = { id: `${exchangeId}-user`, role: 'user', content: questionText, files: files.map(f => f.name) }
     setMessages(prev => [...prev, userMsg])
     setInput('')
     setIsLoading(true)
@@ -58,7 +99,7 @@ export default function ChatBox({ scenario }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           scenario: scenario.id,
-          question: input,
+          question: questionText,
           context,
           mode,
           history: messages.slice(-6)
@@ -71,7 +112,7 @@ export default function ChatBox({ scenario }) {
       const decoder = new TextDecoder()
       let buffer = ''
       let currentRound = null
-      let assistantMsg = { role: 'assistant', rounds: [] }
+      let assistantMsg = { id: exchangeId, role: 'assistant', question: questionText, rounds: [] }
       setMessages(prev => [...prev, assistantMsg])
 
       while (true) {
@@ -121,7 +162,7 @@ export default function ChatBox({ scenario }) {
         }
       }
     } catch (err) {
-      setMessages(prev => [...prev, { role: 'assistant', error: err.message }])
+      setMessages(prev => [...prev, { id: exchangeId, role: 'assistant', question: questionText, error: err.message }])
     }
     
     setIsLoading(false)
@@ -137,6 +178,19 @@ export default function ChatBox({ scenario }) {
         <span className="text-sm font-medium text-white">{scenario.title}</span>
         <span className="text-xs text-slate-500">· {scenario.members.length}位委员</span>
         <div className="ml-auto flex gap-1.5">
+          <button
+            onClick={() => setShowFavorites(prev => !prev)}
+            className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs rounded-lg transition-all ${
+              showFavorites
+                ? 'bg-amber-500/20 text-amber-200 border border-amber-400/30'
+                : 'bg-white/5 text-slate-400 hover:bg-white/10 hover:text-slate-200 border border-white/5'
+            }`}
+            title="查看收藏问答"
+          >
+            <Star size={13} className={favorites.length ? 'fill-amber-300 text-amber-300' : ''} />
+            <span>收藏</span>
+            {favorites.length > 0 && <span className="text-slate-500">{favorites.length}</span>}
+          </button>
           {MODES.map(m => (
             <button
               key={m.id}
@@ -154,6 +208,24 @@ export default function ChatBox({ scenario }) {
         </div>
       </div>
 
+      {showFavorites && (
+        <div className="mt-3 max-h-72 overflow-y-auto rounded-xl border border-amber-400/20 bg-amber-400/5 p-3 space-y-3">
+          {favorites.length === 0 ? (
+            <div className="px-2 py-6 text-center text-xs text-slate-500">还没有收藏问答</div>
+          ) : (
+            favorites.map(item => (
+              <MessageBubble
+                key={item.id}
+                message={item}
+                isFavorite
+                onToggleFavorite={toggleFavorite}
+                compact
+              />
+            ))
+          )}
+        </div>
+      )}
+
       {/* Messages */}
       <div className="flex-1 overflow-y-auto space-y-4 py-6">
         {messages.length === 0 && (
@@ -170,7 +242,12 @@ export default function ChatBox({ scenario }) {
           </div>
         )}
         {messages.map((msg, i) => (
-          <MessageBubble key={i} message={msg} />
+          <MessageBubble
+            key={msg.id || i}
+            message={msg}
+            isFavorite={favorites.some(item => item.id === msg.id)}
+            onToggleFavorite={toggleFavorite}
+          />
         ))}
         {isLoading && messages[messages.length - 1]?.role !== 'assistant' && (
           <div className="flex gap-1.5 px-4 py-3">
