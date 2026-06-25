@@ -101,6 +101,19 @@ export default function ChatBox({ scenario }) {
                     )
                   }
                 }
+              } else if (parsed.error) {
+                const errorSpeaker = { name: '系统', seat: '错误', text: parsed.error }
+                if (currentRound) {
+                  currentRound.speakers = [...(currentRound.speakers || []), errorSpeaker]
+                  assistantMsg = {
+                    ...assistantMsg,
+                    rounds: assistantMsg.rounds.map((r, i) =>
+                      i === assistantMsg.rounds.length - 1 ? currentRound : r
+                    )
+                  }
+                } else {
+                  assistantMsg = { ...assistantMsg, error: parsed.error }
+                }
               }
               setMessages(prev => [...prev.slice(0, -1), { ...assistantMsg }])
             } catch {}

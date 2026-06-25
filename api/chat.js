@@ -76,9 +76,14 @@ const SCENARIO_MEMBERS = {
 async function callModel(name, messages, temperature = 0.6) {
   const modelKey = name === '裁决官' ? 'Pro/DeepSeek-R1' : (PERSON_MODEL[name] || 'GLM-5.2');
   const modelId = MODEL_MAP[modelKey];
-  const apiKey = process.env.SILICONFLOW_API_KEY;
+  const apiBase = (process.env.AI_API_BASE || 'https://api.siliconflow.cn/v1').replace(/\/$/, '');
+  const apiKey = process.env.AI_API_KEY || process.env.SILICONFLOW_API_KEY;
+
+  if (!apiKey) {
+    throw new Error(`API Error (${name}/${modelKey}): missing AI_API_KEY or SILICONFLOW_API_KEY`);
+  }
   
-  const resp = await fetch('https://api.siliconflow.cn/v1/chat/completions', {
+  const resp = await fetch(`${apiBase}/chat/completions`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
     body: JSON.stringify({ model: modelId, messages, temperature, max_tokens: 800, stream: false })
@@ -132,7 +137,12 @@ export default async function handler(req, res) {
       return speaker;
     }));
 
-    const round1 = r1Results.map(r => r.status === 'fulfilled' ? r.value : { name: '?', seat: '?', text: '调用失败' });
+    const round1 = r1Results.map((r, i) => {
+      if (r.status === 'fulfilled') return r.value;
+      const speaker = { name: members[i], seat: seats[i] || '委员', text: `调用失败：${r.reason?.message || 'unknown error'}` };
+      send({ speaker });
+      return speaker;
+    });
 
     if (mode === 'quick') {
       // Skip to Round 4+5
@@ -158,7 +168,12 @@ export default async function handler(req, res) {
       return speaker;
     }));
 
-    const round2 = r2Results.map(r => r.status === 'fulfilled' ? r.value : { name: '?', seat: '?', text: '调用失败' });
+    const round2 = r2Results.map((r, i) => {
+      if (r.status === 'fulfilled') return r.value;
+      const speaker = { name: members[i], seat: seats[i] || '委员', text: `调用失败：${r.reason?.message || 'unknown error'}` };
+      send({ speaker });
+      return speaker;
+    });
 
     // === ROUND 3: 回应与修正 ===
     send({ round: 3, title: 'Round 3 · 回应与修正', speakers: [] });
@@ -177,7 +192,12 @@ export default async function handler(req, res) {
       return speaker;
     }));
 
-    const round3 = r3Results.map(r => r.status === 'fulfilled' ? r.value : { name: '?', seat: '?', text: '调用失败' });
+    const round3 = r3Results.map((r, i) => {
+      if (r.status === 'fulfilled') return r.value;
+      const speaker = { name: members[i], seat: seats[i] || '委员', text: `调用失败：${r.reason?.message || 'unknown error'}` };
+      send({ speaker });
+      return speaker;
+    });
 
     // === ROUND 4+5 ===
     await runConsensusAndArbitration(send, members, seats, round1, round2, round3, topicWithContext);
