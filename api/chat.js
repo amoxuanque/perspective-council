@@ -2,13 +2,13 @@
 // This file handles the multi-model discussion orchestration
 
 const MODEL_MAP = {
-  'DeepSeek-V3.2': 'deepseek-ai/DeepSeek-V3.2',
-  'Qwen3.5-397B': 'Qwen/Qwen3.5-397B-A17B',
-  'GLM-5.2': 'zai-org/GLM-5.2',
-  'DeepSeek-V4-Pro': 'deepseek-ai/DeepSeek-V4-Pro',
-  'MiniMax-M2.5': 'MiniMaxAI/MiniMax-M2.5',
-  'Qwen3-32B': 'Qwen/Qwen3-32B',
-  'Pro/DeepSeek-R1': 'Pro/deepseek-ai/DeepSeek-R1'
+  'DeepSeek-V3.2': 'claude-sonnet-4-5-20250929',
+  'Qwen3.5-397B': 'claude-sonnet-4-5-20250929',
+  'GLM-5.2': 'claude-sonnet-4-5-20250929',
+  'DeepSeek-V4-Pro': 'claude-sonnet-4-5-20250929',
+  'MiniMax-M2.5': 'claude-sonnet-4-5-20250929',
+  'Qwen3-32B': 'claude-sonnet-4-5-20250929',
+  'Pro/DeepSeek-R1': 'claude-opus-4-6-thinking'
 };
 
 const PERSON_MODEL = {
