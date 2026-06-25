@@ -1,6 +1,6 @@
 // Front-end constants (no sensitive model IDs here)
-export const APP_NAME = 'Perspective Council'
-export const APP_DESC = '视角委员会 · 多智能体共创系统'
+export const APP_NAME = '智小库'
+export const APP_DESC = '多智能体共创系统'
 
 export const MODES = [
   { id: 'quick', label: '快速', desc: '独立陈述 + 共识 + 裁决', rounds: 3 },

@@ -38,7 +38,7 @@ export default function MessageBubble({ message, isFavorite = false, onToggleFav
     )
   }
 
-  const filename = `perspective-council-${new Date().toISOString().slice(0, 10)}.png`
+  const filename = `zhixiaoku-${new Date().toISOString().slice(0, 10)}.png`
 
   const renderPng = async () => {
     if (!exportRef.current) return null
@@ -129,7 +129,7 @@ export default function MessageBubble({ message, isFavorite = false, onToggleFav
       <div ref={exportRef} className={`rounded-2xl border border-white/10 bg-[#0a0e1a] p-4 shadow-2xl ${compact ? 'space-y-3' : 'space-y-4'}`}>
         <div className="flex items-center justify-between gap-3 border-b border-white/10 pb-3">
           <div>
-            <div className="text-sm font-semibold text-white">Perspective Council</div>
+            <div className="text-sm font-semibold text-white">智小库</div>
             {message.scenarioTitle && <div className="mt-0.5 text-xs text-slate-500">{message.scenarioTitle}</div>}
           </div>
           <div className="text-[10px] uppercase tracking-wide text-slate-600">PNG Export</div>

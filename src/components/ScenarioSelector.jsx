@@ -65,7 +65,7 @@ export default function ScenarioSelector({ onSelect }) {
       {/* Footer */}
       <div className="text-center mt-12">
         <p className="text-xs text-slate-600">
-          Perspective Council · AI Decision System
+          智小库 · AI Decision System
         </p>
       </div>
     </div>

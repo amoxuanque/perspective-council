@@ -4,13 +4,11 @@ import MessageBubble from './MessageBubble'
 import { persons } from '../lib/prompts'
 import { MODES } from '../lib/constants'
 
-const FAVORITES_KEY = 'perspective-council:favorites'
-
 function createId() {
   return globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`
 }
 
-export default function ChatBox({ scenario }) {
+export default function ChatBox({ scenario, user, favorites = [], onLoginRequired, onToggleFavorite }) {
   const [messages, setMessages] = useState([])
   const [input, setInput] = useState('')
   const [files, setFiles] = useState([])
@@ -18,13 +16,6 @@ export default function ChatBox({ scenario }) {
   const [isLoading, setIsLoading] = useState(false)
   const [mode, setMode] = useState('standard')
   const [showFavorites, setShowFavorites] = useState(false)
-  const [favorites, setFavorites] = useState(() => {
-    try {
-      return JSON.parse(localStorage.getItem(FAVORITES_KEY) || '[]')
-    } catch {
-      return []
-    }
-  })
   const messagesEndRef = useRef(null)
   const fileInputRef = useRef(null)
 
@@ -32,29 +23,12 @@ export default function ChatBox({ scenario }) {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages])
 
-  useEffect(() => {
-    localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites))
-  }, [favorites])
-
   const toggleFavorite = (message) => {
-    if (!message?.id || !message?.question) return
-    setFavorites(prev => {
-      if (prev.some(item => item.id === message.id)) {
-        return prev.filter(item => item.id !== message.id)
-      }
-      return [
-        {
-          id: message.id,
-          role: 'assistant',
-          question: message.question,
-          rounds: message.rounds || [],
-          error: message.error,
-          scenarioTitle: scenario.title,
-          createdAt: new Date().toISOString()
-        },
-        ...prev
-      ]
-    })
+    if (!user) {
+      onLoginRequired?.()
+      return
+    }
+    onToggleFavorite?.(message, scenario.title)
   }
 
   const handleFileUpload = async (e) => {
@@ -188,7 +162,7 @@ export default function ChatBox({ scenario }) {
             title="查看收藏问答"
           >
             <Star size={13} className={favorites.length ? 'fill-amber-300 text-amber-300' : ''} />
-            <span>收藏</span>
+            <span>收藏夹</span>
             {favorites.length > 0 && <span className="text-slate-500">{favorites.length}</span>}
           </button>
           {MODES.map(m => (
@@ -210,7 +184,14 @@ export default function ChatBox({ scenario }) {
 
       {showFavorites && (
         <div className="mt-3 max-h-72 overflow-y-auto rounded-xl border border-amber-400/20 bg-amber-400/5 p-3 space-y-3">
-          {favorites.length === 0 ? (
+          {!user ? (
+            <div className="px-2 py-6 text-center">
+              <div className="text-xs text-slate-500">登录后查看收藏夹</div>
+              <button onClick={onLoginRequired} className="mt-3 px-3 py-1.5 rounded-lg bg-white/10 text-xs text-slate-200 hover:bg-white/15">
+                登录
+              </button>
+            </div>
+          ) : favorites.length === 0 ? (
             <div className="px-2 py-6 text-center text-xs text-slate-500">还没有收藏问答</div>
           ) : (
             favorites.map(item => (

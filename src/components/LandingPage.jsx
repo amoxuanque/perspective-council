@@ -1,4 +1,4 @@
-import { ArrowRight, Play } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 const AGENTS = [
   { name: '分析师', en: 'Analyst', desc: '数据驱动·逻辑分析', color: '#a855f7', angle: -60 },
@@ -34,15 +34,13 @@ export default function LandingPage({ onStart }) {
           {/* Left: Text */}
           <div>
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-              <span className="text-white">Perspective</span><br/>
-              <span className="text-white">Council</span>
-              <span className="gradient-text text-4xl lg:text-5xl ml-3">视角委员会</span>
+              <span className="gradient-text">智小库</span>
             </h1>
             <p className="mt-6 text-xl text-slate-300 leading-relaxed">
               多智能体共创系统 — 让不同思维框架碰撞出更好的决策
             </p>
             <p className="mt-4 text-sm text-slate-400 leading-relaxed max-w-lg">
-              Perspective Council 是一个多智能体 AI 决策系统，模拟由不同专业背景和思维方式的专家组成的虚拟委员会，通过结构化的多轮讨论与辩论，突破认知局限，为您提供更全面、更客观、更高质量的决策建议。
+              智小库是一个多智能体 AI 决策系统，模拟由不同专业背景和思维方式的专家组成的虚拟委员会，通过结构化的多轮讨论与辩论，突破认知局限，为您提供更全面、更客观、更高质量的决策建议。
             </p>
             <div className="mt-8 flex items-center gap-4">
               <button
@@ -50,9 +48,6 @@ export default function LandingPage({ onStart }) {
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:from-blue-500 hover:to-purple-500 transition-all shadow-lg shadow-blue-500/25"
               >
                 立即体验 <ArrowRight size={18} />
-              </button>
-              <button className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-slate-600 text-slate-300 hover:border-slate-400 hover:text-white transition-all">
-                了解更多 <Play size={16} />
               </button>
             </div>
           </div>
