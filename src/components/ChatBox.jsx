@@ -8,6 +8,15 @@ function createId() {
   return globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`
 }
 
+async function fetchChat(payload) {
+  try {
+    return await fetch('/api/chat', payload)
+  } catch {
+    await new Promise(resolve => setTimeout(resolve, 800))
+    return fetch('/api/chat', payload)
+  }
+}
+
 export default function ChatBox({ scenario, user, favorites = [], onLoginRequired, onToggleFavorite }) {
   const [messages, setMessages] = useState([])
   const [input, setInput] = useState('')
@@ -68,7 +77,7 @@ export default function ChatBox({ scenario, user, favorites = [], onLoginRequire
 
     try {
       const context = fileContents.map(f => `[${f.name}]:\n${f.content}`).join('\n\n')
-      const res = await fetch('/api/chat', {
+      const res = await fetchChat({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -135,8 +144,13 @@ export default function ChatBox({ scenario, user, favorites = [], onLoginRequire
           }
         }
       }
-    } catch (err) {
-      setMessages(prev => [...prev, { id: exchangeId, role: 'assistant', question: questionText, error: err.message }])
+    } catch {
+      setMessages(prev => [...prev, {
+        id: exchangeId,
+        role: 'assistant',
+        question: questionText,
+        error: '网络连接中断，请稍后重试。'
+      }])
     }
     
     setIsLoading(false)

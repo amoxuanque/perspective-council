@@ -114,8 +114,18 @@ export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-cache');
   res.setHeader('Connection', 'keep-alive');
 
+  const heartbeat = setInterval(() => {
+    res.write(': keepalive\n\n');
+  }, 8000);
+
   function send(data) {
     res.write(`data: ${JSON.stringify(data)}\n\n`);
+  }
+
+  function finish() {
+    clearInterval(heartbeat);
+    res.write('data: [DONE]\n\n');
+    res.end();
   }
 
   try {
@@ -148,8 +158,7 @@ export default async function handler(req, res) {
       // Skip to Round 4+5
       await runConsensusAndArbitration(send, members, seats, round1, [], [], topicWithContext);
       send({ done: true });
-      res.write('data: [DONE]\n\n');
-      return res.end();
+      return finish();
     }
 
     // === ROUND 2: 交叉质询 ===
@@ -206,8 +215,7 @@ export default async function handler(req, res) {
     send({ error: err.message });
   }
 
-  res.write('data: [DONE]\n\n');
-  res.end();
+  finish();
 }
 
 async function runConsensusAndArbitration(send, members, seats, round1, round2, round3, topic) {
