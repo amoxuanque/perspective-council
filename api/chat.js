@@ -114,7 +114,8 @@ async function callModel(name, messages, temperature = 0.6) {
 
     if (resp.ok) break;
     const err = await resp.text();
-    if (resp.status !== 429 || attempt === 2) {
+    const retryable = [429, 500, 502, 503, 504].includes(resp.status);
+    if (!retryable || attempt === 2) {
       throw new Error(`API Error (${name}/${modelKey}): ${resp.status} - ${err.slice(0, 100)}`);
     }
     const retryAfter = Number(resp.headers.get('retry-after')) * 1000;
