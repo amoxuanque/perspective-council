@@ -105,7 +105,7 @@ async function callModel(name, messages, temperature = 0.6) {
   }
   
   let resp;
-  for (let attempt = 0; attempt < 3; attempt += 1) {
+  for (let attempt = 0; attempt < 5; attempt += 1) {
     resp = await fetch(`${apiBase}/chat/completions`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
@@ -115,7 +115,7 @@ async function callModel(name, messages, temperature = 0.6) {
     if (resp.ok) break;
     const err = await resp.text();
     const retryable = [429, 500, 502, 503, 504].includes(resp.status);
-    if (!retryable || attempt === 2) {
+    if (!retryable || attempt === 4) {
       throw new Error(`API Error (${name}/${modelKey}): ${resp.status} - ${err.slice(0, 100)}`);
     }
     const retryAfter = Number(resp.headers.get('retry-after')) * 1000;
@@ -165,7 +165,7 @@ export default async function handler(req, res) {
     // === ROUND 1: 独立陈述 ===
     send({ round: 1, title: 'Round 1 · 独立陈述', speakers: [] });
     
-    const r1Results = await mapSettledWithConcurrency(members, 2, async (name, i) => {
+    const r1Results = await mapSettledWithConcurrency(members, 1, async (name, i) => {
       const seat = seats[i] || '委员';
       const temp = seat === '主席' ? 0.3 : ['质询','黑天鹅','颠覆'].includes(seat) ? 0.9 : 0.6;
       const sysPrompt = (PROMPTS[name] || `你是${name}。`) + '\n\n【输出要求】直接给出独立判断，≤200字，必须明确表态（支持/反对/有条件支持）。先一句话表态，再给核心理由。';
@@ -196,7 +196,7 @@ export default async function handler(req, res) {
     send({ round: 2, title: 'Round 2 · 交叉质询', speakers: [] });
     const r1Summary = round1.map(r => `【${r.name}】(${r.seat}): ${r.text}`).join('\n\n');
     
-    const r2Results = await mapSettledWithConcurrency(members, 2, async (name, i) => {
+    const r2Results = await mapSettledWithConcurrency(members, 1, async (name, i) => {
       const seat = seats[i] || '委员';
       const sysPrompt = (PROMPTS[name] || '') + '\n\n【输出要求】选择1-2位你最不同意的委员，提出最锐利的质疑（≤150字）。格式：→ [对方名字]：[质疑问题]';
       const text = await callModel(name, [
@@ -219,7 +219,7 @@ export default async function handler(req, res) {
     send({ round: 3, title: 'Round 3 · 回应与修正', speakers: [] });
     const r2Summary = round2.map(r => `【${r.name}质疑】: ${r.text}`).join('\n\n');
 
-    const r3Results = await mapSettledWithConcurrency(members, 2, async (name, i) => {
+    const r3Results = await mapSettledWithConcurrency(members, 1, async (name, i) => {
       const seat = seats[i] || '委员';
       const sysPrompt = (PROMPTS[name] || '') + '\n\n【输出要求】回应质疑（≤150字）：坚持原判断并补充论据，或承认盲区并修正立场。';
       const myR1 = round1.find(r => r.name === name)?.text || '';
