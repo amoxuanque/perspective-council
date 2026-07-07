@@ -73,6 +73,27 @@ const SCENARIO_MEMBERS = {
   'content': ['PG', '费曼', '乔布斯', 'MrBeast'],
 };
 
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+async function mapSettledWithConcurrency(items, limit, task) {
+  const results = new Array(items.length);
+  let nextIndex = 0;
+
+  async function worker() {
+    while (nextIndex < items.length) {
+      const index = nextIndex++;
+      try {
+        results[index] = { status: 'fulfilled', value: await task(items[index], index) };
+      } catch (reason) {
+        results[index] = { status: 'rejected', reason };
+      }
+    }
+  }
+
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
+  return results;
+}
+
 async function callModel(name, messages, temperature = 0.6) {
   const modelKey = name === '裁决官' ? 'Pro/DeepSeek-R1' : (PERSON_MODEL[name] || 'GLM-5.2');
   const modelId = MODEL_MAP[modelKey];
@@ -83,15 +104,24 @@ async function callModel(name, messages, temperature = 0.6) {
     throw new Error(`API Error (${name}/${modelKey}): missing AI_API_KEY or SILICONFLOW_API_KEY`);
   }
   
-  const resp = await fetch(`${apiBase}/chat/completions`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
-    body: JSON.stringify({ model: modelId, messages, temperature, max_tokens: 800, stream: false })
-  });
-  
-  if (!resp.ok) {
+  let resp;
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    resp = await fetch(`${apiBase}/chat/completions`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
+      body: JSON.stringify({ model: modelId, messages, temperature, max_tokens: 800, stream: false })
+    });
+
+    if (resp.ok) break;
     const err = await resp.text();
-    throw new Error(`API Error (${name}/${modelKey}): ${resp.status} - ${err.slice(0, 100)}`);
+    if (resp.status !== 429 || attempt === 2) {
+      throw new Error(`API Error (${name}/${modelKey}): ${resp.status} - ${err.slice(0, 100)}`);
+    }
+    const retryAfter = Number(resp.headers.get('retry-after')) * 1000;
+    const backoff = Number.isFinite(retryAfter) && retryAfter > 0
+      ? retryAfter
+      : 1200 * (2 ** attempt) + Math.floor(Math.random() * 600);
+    await sleep(backoff);
   }
   
   const data = await resp.json();
@@ -134,7 +164,7 @@ export default async function handler(req, res) {
     // === ROUND 1: 独立陈述 ===
     send({ round: 1, title: 'Round 1 · 独立陈述', speakers: [] });
     
-    const r1Results = await Promise.allSettled(members.map(async (name, i) => {
+    const r1Results = await mapSettledWithConcurrency(members, 2, async (name, i) => {
       const seat = seats[i] || '委员';
       const temp = seat === '主席' ? 0.3 : ['质询','黑天鹅','颠覆'].includes(seat) ? 0.9 : 0.6;
       const sysPrompt = (PROMPTS[name] || `你是${name}。`) + '\n\n【输出要求】直接给出独立判断，≤200字，必须明确表态（支持/反对/有条件支持）。先一句话表态，再给核心理由。';
@@ -145,7 +175,7 @@ export default async function handler(req, res) {
       const speaker = { name, seat, text };
       send({ speaker });
       return speaker;
-    }));
+    });
 
     const round1 = r1Results.map((r, i) => {
       if (r.status === 'fulfilled') return r.value;
@@ -165,7 +195,7 @@ export default async function handler(req, res) {
     send({ round: 2, title: 'Round 2 · 交叉质询', speakers: [] });
     const r1Summary = round1.map(r => `【${r.name}】(${r.seat}): ${r.text}`).join('\n\n');
     
-    const r2Results = await Promise.allSettled(members.map(async (name, i) => {
+    const r2Results = await mapSettledWithConcurrency(members, 2, async (name, i) => {
       const seat = seats[i] || '委员';
       const sysPrompt = (PROMPTS[name] || '') + '\n\n【输出要求】选择1-2位你最不同意的委员，提出最锐利的质疑（≤150字）。格式：→ [对方名字]：[质疑问题]';
       const text = await callModel(name, [
@@ -175,7 +205,7 @@ export default async function handler(req, res) {
       const speaker = { name, seat, text };
       send({ speaker });
       return speaker;
-    }));
+    });
 
     const round2 = r2Results.map((r, i) => {
       if (r.status === 'fulfilled') return r.value;
@@ -188,7 +218,7 @@ export default async function handler(req, res) {
     send({ round: 3, title: 'Round 3 · 回应与修正', speakers: [] });
     const r2Summary = round2.map(r => `【${r.name}质疑】: ${r.text}`).join('\n\n');
 
-    const r3Results = await Promise.allSettled(members.map(async (name, i) => {
+    const r3Results = await mapSettledWithConcurrency(members, 2, async (name, i) => {
       const seat = seats[i] || '委员';
       const sysPrompt = (PROMPTS[name] || '') + '\n\n【输出要求】回应质疑（≤150字）：坚持原判断并补充论据，或承认盲区并修正立场。';
       const myR1 = round1.find(r => r.name === name)?.text || '';
@@ -199,7 +229,7 @@ export default async function handler(req, res) {
       const speaker = { name, seat, text };
       send({ speaker });
       return speaker;
-    }));
+    });
 
     const round3 = r3Results.map((r, i) => {
       if (r.status === 'fulfilled') return r.value;
